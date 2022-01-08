@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lua.register">
+
+    <application>
+        <activity
+            android:name=".feature.RegisterActivity"
+            android:exported="true"
+            android:label="@string/title_activity_register"
+            android:theme="@style/Theme.Design.NoActionBar" />
+    </application>
+
+</manifest>

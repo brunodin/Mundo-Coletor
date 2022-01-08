@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Login -->
+    <string name="login_welcome">Bem vindo(a)!</string>
+    <string name="login_email">E-mail</string>
+    <string name="login_password">Senha</string>
+    <string name="login_back_description">Botão Voltar</string>
+    <string name="login_forgot_password">Esqueceu sua Senha?</string>
+    <string name="login_sing_in">Entrar</string>
+    <string name="login_sing_up">Cadastre-se</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <!--  Forgot Password -->
+    <string name="forgot_password_title">Esqueci a senha</string>
+    <string name="forgot_password_description">Informe seu e-mail para que possa trocar sua senha</string>
+    <string name="forgot_password_email">E-mail</string>
+    <string name="forgot_password_send_email">Enviar e-mail</string>
+    <string name="login_password_changed">Senha Redefinida!</string>
+    <string name="login_password_change_description">Caso o email informado tenha um cadastro em nosso sistema, será recebido um e-mail com a redefinição de senha. Procure-o em sua caixa de mensagens ou spam.</string>
+
+</resources>

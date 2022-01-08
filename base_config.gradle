@@ -1,0 +1,64 @@
+apply from: '../../../dependencies.gradle'
+
+android {
+    compileSdk AppConfig.maxSdkVersion
+
+    defaultConfig {
+        minSdk AppConfig.minSdkVersion
+        targetSdk AppConfig.maxSdkVersion
+        versionCode AppConfig.versionCode
+        versionName AppConfig.versionName
+
+        testInstrumentationRunner AppConfig.testInstrumentationRunner
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+        useIR = true
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion Version.compose
+        kotlinCompilerVersion '1.5.21'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.0'
+    testImplementation "junit:junit:${Version.junit}"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:${Version.compose}"
+    debugImplementation "androidx.compose.ui:ui-tooling:${Version.compose}"
+    implementation "androidx.compose.ui:ui:${Version.compose}"
+    implementation "androidx.compose.material:material:${Version.compose}"
+    implementation "androidx.compose.ui:ui-tooling-preview:${Version.compose}"
+    implementation 'androidx.activity:activity-compose:1.4.0'
+    implementation("androidx.navigation:navigation-compose:${Version.navigation}")
+	implementation "com.google.accompanist:accompanist-navigation-animation:${Version.navigationAnimated}"
+    // Koin
+    implementation "io.insert-koin:koin-core:${Version.koin}"
+    testImplementation "io.insert-koin:koin-test:${Version.koin}"
+    implementation "io.insert-koin:koin-android:${Version.koin}"
+    implementation "io.insert-koin:koin-androidx-navigation:${Version.koin}"
+    implementation "io.insert-koin:koin-androidx-compose:${Version.koin}"
+}

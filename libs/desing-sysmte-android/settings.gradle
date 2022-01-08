@@ -1,0 +1,11 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "desing system"
+include ':desing-system', ':desing-system-demo', ':core'
+
+project(':core').projectDir = new File(settingsDir, '../core-module/core')

@@ -1,0 +1,12 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "login"
+include ':login', ':logindemo', ':desing-system', ':core'
+
+project(":desing-system").projectDir = new File(settingsDir, "../desing-sysmte-android/desing-system")
+project(":core").projectDir = new File(settingsDir, "../core-module/core")

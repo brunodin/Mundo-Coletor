@@ -1,0 +1,25 @@
+ext.AppConfig = [
+	minSdkVersion             : 28,
+	maxSdkVersion             : 31,
+	testInstrumentationRunner : "androidx.test.runner.AndroidJUnitRunner",
+	appVersion : 1,
+	versionName : "1",
+]
+
+ext.Version = [
+		koin        : "3.1.3",
+		compose     : '1.0.1',
+		junit       : '4.12',
+		core        : '1.7.0',
+		appCompat   : '1.3.1',
+		material    : '1.4.0',
+		navigation  : '2.4.0-beta02',
+		navigationAnimated  : '0.21.3-beta',
+]
+
+ext.Modules = [
+		login         : ":login",
+		desingSystem  : ":desing-system",
+		coreApi       : ":core",
+		register      : ":register",
+]

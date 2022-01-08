@@ -1,0 +1,13 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Mundo Coletor"
+include ':app', ':desing-system', ':core', ':register'
+
+project(":desing-system").projectDir = new File(settingsDir, "./libs/desing-sysmte-android/desing-system")
+project(":core").projectDir = new File(settingsDir, "./libs/core-module/core")
+project(":register").projectDir = new File(settingsDir, "./libs/register-android/register")
